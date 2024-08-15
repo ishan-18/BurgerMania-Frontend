@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - KFC</title>
+    <link rel="stylesheet" href="styles4.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img
+          src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg"
+          alt="KFC Logo"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="./KFC.html">Home</a></li>
+          <li><a href="./KFCMenu.html">Menu</a></li>
+          <li><a href="./KFCAbout.html" >About</a></li>
+          <li><a href="./KFCContact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-icon">
+        <a href="./KFCCart.html"><ion-icon name="cart"></ion-icon></a>
+      </div>
+      <div class="toggle"></div>
+    </header>
+
+    <main class="main">
+      <div class="content">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>
+              We’d love to hear from you! Whether you have a question, feedback,
+              or just want to say hello, feel free to reach out.
+            </p>
+            <div class="contact-details">
+              <p>
+                <ion-icon name="mail"></ion-icon> Email:
+                <a href="mailto:info@kfc.com">info@kfc.com</a>
+              </p>
+              <p>
+                <ion-icon name="call"></ion-icon> Phone:
+                <a href="tel:+123456789">+1 234 567 89</a>
+              </p>
+              <p>
+                <ion-icon name="location"></ion-icon> Address: 123 KFC Lane,
+                Chicken Town, USA
+              </p>
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509724!2d144.95373531531695!3d-37.817209979751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11c0d3%3A0x5045675218ceed30!2sKFC%20Melbourne%20CBD!5e0!3m2!1sen!2sau!4v1633043341234!5m2!1sen!2sau"
+              width="400"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <form class="contact-form">
+            <h2>Contact Form</h2>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Your Name"
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Your Email"
+            />
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Your Message"
+              rows="5"
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer">
+      <ul class="sci">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+      </ul>
+      <div class="prevNext">
+        <p>Follow Us</p>
+        <span class="prev">Prev</span>
+        <span class="next">Next</span>
+      </div>
+    </div>
+  </body>
+</html>

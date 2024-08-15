@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KFC Landing Page</title>
+    <link rel="stylesheet" href="styles2.css" />
+    <style>
+      .main {
+        padding: 20px;
+      }
+
+      .menu-items {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .menu-item {
+        background-color: white;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 10px;
+        text-align: center;
+        width: 300px;
+      }
+
+      .menu-item img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .add-to-cart {
+        background-color: #d10a20;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"
+        ><img
+          src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg"
+          alt="KFC Logo"
+      /></a>
+      <nav>
+        <ul>
+          <li><a href="./KFC.html">Home</a></li>
+          <li><a href="./KFCMenu.html" class="active">Menu</a></li>
+          <li><a href="./KFCAbout.html">About</a></li>
+          <li><a href="./KFCContact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-icon">
+        <a href="./KFCCart.html"><ion-icon name="cart"></ion-icon></a>
+      </div>
+      <nav>
+        <ul id="button-list">
+          <li>
+            <a href="./KFCSignup.html" style="color: white" class="cart-signup"
+              ><ion-icon name="log-in-outline"></ion-icon
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="toggle"></div>
+    </header>
+
+    <main class="main">
+      <section id="menu">
+        <div class="menu-items" id="menu-items"></div>
+      </section>
+    </main>
+
+    <!-- Add Burger Modal -->
+    <div id="addModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeAddModal()">&times;</span>
+        <h2>Add Burger</h2>
+        <form id="addForm">
+          <label for="newBurgerName">Burger Name:</label>
+          <input type="text" id="newBurgerName" name="newBurgerName" required />
+
+          <label for="newBurgerDesc">Burger Description:</label>
+          <textarea id="newBurgerDesc" name="newBurgerDesc" required></textarea>
+
+          <label for="newPrice">Price:</label>
+          <input
+            type="number"
+            id="newPrice"
+            name="newPrice"
+            step="0.01"
+            required
+          />
+
+          <label for="newBurgerImage">Burger Image URL:</label>
+          <input
+            type="text"
+            id="newBurgerImage"
+            name="newBurgerImage"
+            required
+          />
+
+          <label for="newBurgerCategory">Burger Category:</label>
+          <input
+            type="text"
+            id="newBurgerCategory"
+            name="newBurgerCategory"
+            required
+          />
+
+          <button type="submit">Add Burger</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Edit Burger</h2>
+        <form id="editForm">
+          <label for="burgerName">Burger Name:</label>
+          <input type="text" id="burgerName" name="burgerName" required />
+
+          <label for="burgerDesc">Burger Description:</label>
+          <textarea id="burgerDesc" name="burgerDesc" required></textarea>
+
+          <label for="price">Price:</label>
+          <input type="number" id="price" name="price" step="0.01" required />
+
+          <label for="burgerImage">Burger Image:</label>
+          <input type="text" id="burgerImage" name="burgerImage" required />
+
+          <label for="burgerCategory">Burger Category:</label>
+          <input
+            type="text"
+            id="burgerCategory"
+            name="burgerCategory"
+            required
+          />
+
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer">
+      <ul class="sci">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+      </ul>
+      <div class="prevNext">
+        <p>Follow Us</p>
+        <span class="prev">Prev</span>
+        <span class="next">Next</span>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+    <script src="script3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    list-style: none;
+}
+
+body {
+    background: radial-gradient(#f0483a, #d10a20);
+}
+
+header {
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main .content {
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row; /* Stack cards vertically */
+    gap: 20px; /* Space between cards */
+    text-align: justify;
+}
+
+.card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    position: relative; /* Position for icon */
+    max-width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.card-icon {
+    font-size: 2em; /* Icon size */
+    color: #d10a20; /* KFC red color */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.card h2 {
+    color: #2b1055; /* Dark color for card headings */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.card p {
+    color: #333; /* Dark gray for text */
+    font-size: 1.1em; /* Paragraph size */
+    margin-bottom: 10px; /* Space below paragraph */
+}
+
+.card ul {
+    list-style-type: disc; /* Bullet points for list */
+    margin-left: 20px; /* Indent list */
+}
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    padding: 30px 100px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer .sci {
+    display: flex;
+}
+
+.footer .sci li {
+    margin-right: 20px;
+}
+
+.footer .sci li a {
+    color: #fff;
+    font-size: 2em;
+    display: inline-block;
+    transition: 0.25s;
+}
+
+.footer .sci li a:hover {
+    transform: translateY(-5px);
+}
+
+.footer .prevNext {
+    user-select: none;
+}
+
+.footer .prevNext p {
+    color: #fff;
+    text-align: end;
+    margin-bottom: 15px;
+}
+
+.footer .prevNext p::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer .prevNext span {
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.25s;
+}
+
+.footer .prevNext span:hover {
+    transform: translateY(-5px);
+}
+
+.cart-icon ion-icon {
+    font-size: 1.5rem; /* Size of the cart icon */
+    color: #fff; /* Color of the icon */
+    transition: color 0.3s; /* Transition effect on hover */
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .main {
+        padding: 150px 50px 100px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .main .content {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .footer {
+        padding: 20px 50px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footer .prevNext {
+        margin-bottom: 20px;
+    }
+
+    .footer .prevNext p {
+        text-align: center;
+    }
+
+    .footer .prevNext p::before {
+        display: none;
+    }
+
+    .footer .prevNext span {
+        text-align: center;
+    }
+}

@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  list-style: none;
+}
+
+body {
+  background: radial-gradient(#f0483a, #d10a20);
+}
+
+header {
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+header .logo img {
+  max-width: 150px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  background: #fff;
+  color: #2b1055;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.content {
+  width: 1000px; /* Adjust width as needed */
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between columns */
+}
+
+.contact-info {
+  flex: 1; /* Take up 1 part of the space */
+  background-color: #fff; /* White background for contact info */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: #2b1055; /* Dark color for headings */
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.contact-details ion-icon {
+  margin-right: 10px;
+  color: #d10a20; /* KFC red color */
+}
+
+.contact-form {
+  flex: 1; /* Take up 1 part of the space */
+  background-color: #fff; /* White background for form */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #2b1055; /* Dark color for headings */
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #d10a20; /* KFC red color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #a50715; /* Darker red on hover */
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  padding: 30px 100px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer .sci {
+  display: flex;
+}
+
+.footer .sci li {
+  list-style: none;
+}
+
+.footer .sci li a {
+  color: #fff;
+  font-size: 2em;
+  margin-right: 20px;
+  display: inline-block;
+  transition: 0.25s;
+}
+
+.footer .sci li a:hover {
+  transform: translateY(-5px);
+}
+
+.footer .prevNext {
+  user-select: none;
+}
+
+.footer .prevNext p {
+  color: #fff;
+  text-align: end;
+  margin-bottom: 15px;
+}
+
+.footer .prevNext p::before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer .prevNext span {
+  color: #fff;
+  text-align: end;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.25s;
+}
+
+.footer .prevNext span:hover {
+  transform: translateY(-5px);
+}
+
+.cart-icon ion-icon {
+  font-size: 1.5rem; /* Size of the cart icon */
+  color: #fff; /* Color of the icon */
+  transition: color 0.3s; /* Transition effect on hover */
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  .main {
+    padding: 50px 20px;
+  }
+
+  .content {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .contact-container {
+    flex-direction: column; /* Stack columns on smaller screens */
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%; /* Full width for each section */
+  }
+
+  .footer {
+    padding: 20px 50px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
