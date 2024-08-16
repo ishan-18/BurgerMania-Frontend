@@ -20,6 +20,7 @@ window.onload = function () {
           `;
         } else {
           buttonHtml = `
+          <input type="number" id="quantity-${d.id}" placeholder="Enter the Quantity" min=1/>
             <button class="add-to-cart" id="add-to-cart" onclick="addToCart(${id}, ${d.id})">Add to Cart</button>
           `;
         }
@@ -32,7 +33,7 @@ window.onload = function () {
             <h3>${d.burgerName}</h3>
             <p>${d.burgerDesc}</p>
             <p>${d.price}</p>
-            <input type="number" id="quantity-${d.id}" placeholder="Enter the Quantity" min=1/>
+            
             ${buttonHtml}
         </div>
         `;
@@ -158,7 +159,7 @@ function closeAddModal() {
 }
 
 document.getElementById("addForm").onsubmit = function (event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
   var newBurger = {
     burgerName: document.getElementById("newBurgerName").value,
@@ -181,7 +182,7 @@ document.getElementById("addForm").onsubmit = function (event) {
       console.log(data);
       closeAddModal();
       alert("Burger added successfully!");
-      window.location.href = "./KFCMenu.html"
+      window.location.href = "./KFCMenu.html";
     })
     .catch((error) => {
       console.error("Error adding burger:", error);
